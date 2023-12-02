@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background: #040924;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+
+.card {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  background: white;
+  max-width: 42.8rem;
+  margin: 0 auto;
+  border-radius: .6rem;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
+}
+
+.title {
+  color: #0C3440;
+  font-size: 3.2rem;
+  line-height: 4rem;
+}
+
+form {
+  width: 30rem;
+}
+
+form h1 {
+  margin-bottom: 3.2rem;
+}
+
+form label {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #00453A;
+  display: block;
+  margin-bottom: .8rem;
+}
+
+form input {
+  width: 100%;
+  border: 1px solid #49505780;
+  background: #DCE2E9;
+  padding: 1.6rem;
+  border-radius: .4rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+}
+
+form input:focus {
+  outline: 2px solid #02799D;
+}
+
+.input-wrapper + .input-wrapper {
+  margin-top: 1.6rem;
+}
+
+form button {
+  margin-top: 3.2rem;
+  padding: 1.6rem;
+  width: 100%;
+  border: none;
+  background: #02799D;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  gap: .8rem;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  line-height: 2rem;
+  cursor: pointer;
+  align-items: center;
+  transition: background .4s;
+}
+
+button:hover {
+  background: #005d79;
+}
+
+.modal-wrapper.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-wrapper {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.70);
+  display: grid;
+  place-content: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  position: relative;
+}
+
+.modal button {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  cursor: pointer;
+  transition: transform .4s;
+}
+
+.modal button:hover {
+  transform: scale(1.4);
+}
+
+.alert-error {
+  position: absolute;
+  background: #F03E3E;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: .8rem 0;
+  color: white;
+  font-weight: bold;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: transform .5s;
+}
+
+.alert-error.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
